@@ -2,6 +2,8 @@ import React from "react";
 
 import api from "../utils/Api";
 import Card from "./Card";
+import iconProfile from "../images/edit-button.svg";
+import iconPhoto from "../images/add-button.svg";
 
 function Main(props) {
 
@@ -34,12 +36,12 @@ function Main(props) {
 					<h1 className="profile__name">{userName}</h1>
 					<p className="profile__specialization">{userDescription}</p>
 					<button className="profile__edit-button link" type="button" onClick={props.onEditProfile}>
-						<img className="profile__edit-button-img" src='/images/edit-button.svg'
+						<img className="profile__edit-button-img" src={iconProfile}
 							alt="Кнопка редактирования профиля" />
 					</button>
 				</article>
 				<button className="profile__add-button link" type="button" onClick={props.onAddPlace}>
-					<img className="profile__add-button-img" src='/images/add-button.svg' alt="
+					<img className="profile__add-button-img" src={iconPhoto} alt="
 		Кнопка добавления контента"/>
 				</button>
 			</section>

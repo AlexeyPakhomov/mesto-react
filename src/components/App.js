@@ -5,6 +5,7 @@ import Main from './Main';
 import Footer from './Footer';
 import PopupWithForm from './PopupWithForm';
 import ImagePopup from './ImagePopup';
+import { iconClosePopup } from "../utils/constants";
 
 function App() {
 
@@ -110,7 +111,7 @@ function App() {
 			<div className="popup popup_type_confirm">
 				<div className="popup__container popup__container-confirm">
 					<button className="popup__close-icon" type="button">
-						<img className="popup__close-icon-img link" src='/images/close-icon.svg'
+						<img className="popup__close-icon-img link" src={iconClosePopup}
 							alt="Кнопка закрытия окна" />
 					</button>
 					<h2 className="popup__title popup__title-confirm">Вы уверены?</h2>

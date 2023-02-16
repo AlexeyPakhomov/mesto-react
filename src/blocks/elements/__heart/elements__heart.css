@@ -5,7 +5,8 @@
 	min-width: 22px;
 	width: 100%;
 	min-height: 19px;
-	background: url(../../../../public/images/heart.svg) center no-repeat;
+	background: url(../../../images/heart.svg) center no-repeat;
+	/* background: url(../../../../public/images/heart.svg) center no-repeat; */
 	border: none;
 }
 
