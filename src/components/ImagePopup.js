@@ -1,0 +1,21 @@
+import React from "react";
+
+function ImagePopup(card) {
+
+	return (
+		<div className={`popup popup_type_large-photo ${card.link ? 'popup_opened' : ''}`}>
+			<div className="popup__container-large-photo">
+				<button className="popup__close-icon" type="button">
+					<img className="popup__close-icon-img link" src='/images/close-icon.svg'
+						alt="Кнопка закрытия окна" onClick={card.onClose} />
+				</button>
+				<figure className="popup__figure">
+					<img className="popup__large-photo" src={card.link} alt={card.name} />
+					<figcaption className="popup__figcaption">{card.name}</figcaption>
+				</figure>
+			</div>
+		</div>
+	)
+}
+
+export default ImagePopup;
