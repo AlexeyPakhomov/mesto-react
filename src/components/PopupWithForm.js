@@ -1,27 +1,23 @@
 import React from "react";
 import { iconClosePopup } from "../utils/constants";
 
-function PopupWithForm(props) {
-	return (
-
-		<div className={`popup popup_type_${props.name} ${props.isOpen && 'popup_opened'}`}>
-			<div className="popup__container">
-				<button className="popup__close-icon" type="button" onClick={props.onClose}>
-					<img className="popup__close-icon-img link" src={iconClosePopup}
-						alt="Кнопка закрытия окна" />
-				</button>
-				<h2 className="popup__title popup__title-avatar">{props.title}</h2>
-				<form
-					className="popup__form popup__form_block_avatar"
-					action="#"
-					id="formAvatar"
-					name={`form${props.name}`}
-					noValidate>
-					{props.children}
-				</form>
-			</div>
-		</div>
-	)
+function PopupWithForm({ isOpen, onClose, name, title, children, buttonText }) {
+  return (
+    <div className={`popup popup_type_${name} ${isOpen && "popup_opened"}`}>
+      <div className="popup__container">
+        <button className="popup__close-icon" type="button" onClick={onClose}>
+          <img className="popup__close-icon-img link" src={iconClosePopup} alt="Кнопка закрытия окна" />
+        </button>
+        <h2 className="popup__title popup__title-avatar">{title}</h2>
+        <form className="popup__form" action="#" name={`form${name}`}>
+          {children}
+          <button className="popup__button popup__button_disabled link" type="submit">
+            {buttonText}
+          </button>
+        </form>
+      </div>
+    </div>
+  );
 }
 
 export default PopupWithForm;
