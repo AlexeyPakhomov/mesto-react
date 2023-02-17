@@ -6,5 +6,4 @@
 
     * Сайт адаптирован под разную ширину экрана. Основные брекпоинты: 424px, 767px, 1280px.
 
-
-    https://alexeypakhomov.github.io/mesto-react/
+https://alexeypakhomov.github.io/mesto-react/
