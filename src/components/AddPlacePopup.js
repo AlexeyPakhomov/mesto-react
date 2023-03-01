@@ -31,6 +31,7 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
           minLength="2"
           maxLength="30"
           required
+          value={name}
           onChange={handleChangeName}
         />
         <span className="popup__input-error place-input-error"></span>
@@ -44,6 +45,7 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
           id="url-input"
           placeholder="Ссылка на картинку"
           required
+          value={link}
           onChange={handleChangeLink}
         />
         <span className="popup__input-error url-input-error"></span>
