@@ -1,7 +1,7 @@
 import React from "react";
 import { iconClosePopup } from "../utils/constants";
 
-function PopupWithForm({ isOpen, onClose, name, title, children, buttonText }) {
+function PopupWithForm({ isOpen, onClose, name, title, children, buttonText, onSubmit }) {
   return (
     <div className={`popup popup_type_${name} ${isOpen && "popup_opened"}`}>
       <div className="popup__container">
@@ -9,9 +9,9 @@ function PopupWithForm({ isOpen, onClose, name, title, children, buttonText }) {
           <img className="popup__close-icon-img link" src={iconClosePopup} alt="Кнопка закрытия окна" />
         </button>
         <h2 className="popup__title popup__title-avatar">{title}</h2>
-        <form className="popup__form" action="#" name={`form${name}`}>
+        <form className="popup__form" action="#" name={`form${name}`} onSubmit={onSubmit}>
           {children}
-          <button className="popup__button popup__button_disabled link" type="submit">
+          <button className="popup__button link" type="submit">
             {buttonText}
           </button>
         </form>
